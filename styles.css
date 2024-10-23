@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #242d6b;
+    --dark-color: #0b1954;
+    --black: #000000;
+    --light-color: #f1f1f1;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    color: var(--light-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body {
+  font-size: 18px; /* Aumenta o tamanho geral do texto */
+  line-height: 1.6; /* Define um bom espaçamento entre as linhas */
+}
+
+h1 {
+  font-size: 36px; /* Tamanho do título principal */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px; /* Tamanho do subtítulo */
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px; /* Tamanho confortável para parágrafos */
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  margin-bottom: 25px; /* Ajusta o espaço entre a imagem e o texto */
+}
+
+.btn {
+  font-size: 16px; /* Tamanho confortável para botões */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Tamanho menor para títulos em telas pequenas */
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px; /* Ajuste de parágrafos em telas pequenas */
+  }
+
+  .profile-img {
+    width: 120px; /* Reduz a imagem para dispositivos menores */
+    height: 120px;
+  }
+}
+
+
+  header, section {
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(158, 158, 158, 0.3); /* Sombra leve */
+    font-weight: bold;
+  }
+  
+  
+  
+  button {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dark-theme {
+    background-color: var(--black);
+    color: var(--light-color);
+  }
+  
+  .light-theme {
+    background-color: var(--light-color);
+    color: var(--black);
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .slide {
+    min-width: 300px;
+    margin-right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    scroll-snap-align: start;
+  }
+  
+  .social-links a {
+    margin-right: 10px;
+    color: var(--primary-color);
+  }
+  
+  #cookie-consent {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px;
+    display: none;
+  }
+  /* Estilo do menu de navegação */
+nav {
+    background-color: var(--dark-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: var(--primary-color);
+  }
+  /* Tema escuro */
+.dark-theme h1, .dark-theme h2 {
+    color: #e0e0e0; /* Cinza claro que contrasta bem com fundo escuro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra leve para destaque */
+  }
+  
+  /* Tema claro */
+  .light-theme h1, .light-theme h2 {
+    color: #2c3e50; /* Azul escuro suave para fundo claro */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3); /* Sombra leve para fundo claro */
+  }
+/* Container da imagem */
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo da imagem pessoal */
+  .profile-img {
+    width: 150px; /* Tamanho ajustável, dependendo da imagem */
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 3px solid var(--primary-color); /* Borda sutil com a cor primária */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
+    transition: transform 0.3s ease-in-out; /* Animação suave ao passar o mouse */
+  }
+  
+  /* Efeito ao passar o mouse na imagem */
+  .profile-img:hover {
+    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+  }
+    
