@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de um desenvolvedor especializado em JavaScript, Python, C e tecnologias web.">
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme">
-  <nav>
+  <nav aria-label="Navegação principal">
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="contact.html">Contatos</a></li>
     </ul>
-    <button id="theme-toggle">Alterar tema</button>
+    <button id="theme-toggle" aria-label="Alternar entre tema claro e escuro">Alterar tema</button>
   </nav>
 
   <header>
@@ -20,36 +21,54 @@
     <p>Eu sou um desenvolvedor especializado em JavaScript, Python, C, e mais.</p>
   </header>
 
-  <section id="about">
-    <div class="profile-picture">
+  <main>
+    <section id="about">
+      <div class="profile-picture">
         <img src="rosto.png" alt="Minha Foto" class="profile-img">
       </div>
-    <h2>Sobre Mim</h2>
-    <p>Desenvolvedor com experiência em JavaScript, Python, C e habilidades em manipulação de imagem com GIMP. Trabalho com tecnologias web como HTML e CSS para criar soluções práticas e visuais.</p>
-    <div class="social-links">
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
-    </div>
-  </section>
+      <h2>Sobre Mim</h2>
+      <p>Desenvolvedor com experiência em JavaScript, Python, C e habilidades em manipulação de imagem com GIMP. Trabalho com tecnologias web como HTML e CSS para criar soluções práticas e visuais.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projetos</h2>
-    <div class="slider">
-      <div class="slide">
-        <div class="project-card">
-          <img src="shot-2024-10-24_08-19-01.png" alt="Imagem do projeto 1" class="project-img">
-          <div class="project-info">
-            <p>Breve descrição do projeto 1, destacando suas funcionalidades e tecnologias usadas.</p>
-            <a href="https://github.com/seu-usuario/projeto1" class="btn" target="_blank">Ver no GitHub</a>
+    <section id="projects" class="projects-section">
+      <h2>Projetos</h2>
+      <div class="slider" aria-label="Lista de projetos">
+        <div class="slide">
+          <div class="project-card">
+            <img src="shot-2024-10-24_08-19-01.png" alt="Imagem do projeto Blog de estudos católicos" class="project-img">
+            <div class="project-info">
+              <p>Blog de estudos dedicado à fé católica, feito apenas com HTML e CSS.</p>
+              <a href="https://github.com/seu-usuario/projeto1" class="btn" target="_blank">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="project-card">
+            <img src="projeto2.png" alt="Imagem do projeto 2" class="project-img">
+            <div class="project-info">
+              <p>Projeto de automação usando Python para gerenciar tarefas repetitivas.</p>
+              <a href="https://github.com/seu-usuario/projeto2" class="btn" target="_blank">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="project-card">
+            <img src="projeto3.png" alt="Imagem do projeto 3" class="project-img">
+            <div class="project-info">
+              <p>Sistema de gestão escolar desenvolvido com C e MySQL.</p>
+              <a href="https://github.com/seu-usuario/projeto3" class="btn" target="_blank">Ver no GitHub</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="slide">Projeto 2</div>
-      <div class="slide">Projeto 3</div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <p>© 2024 Meu Portfólio. Todos os direitos reservados.</p>

@@ -1,23 +1,26 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #242d6b;
-    --dark-color: #0b1954;
-    --black: #000000;
-    --light-color: #f1f1f1;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: var(--black);
-    color: var(--light-color);
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  body {
+  --primary-color: #2c3e50;
+  --secondary-color: #242d6b;
+  --dark-color: #0b1954;
+  --black: #000000;
+  --light-color: #f1f1f1;
+}
+
+body {
+  font-family: Arial, sans-serif;
   font-size: 18px; /* Aumenta o tamanho geral do texto */
   line-height: 1.6; /* Define um bom espaçamento entre as linhas */
+  background-color: var(--black);
+  color: var(--light-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2 {
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px rgba(158, 158, 158, 0.3); /* Sombra leve */
+  font-weight: bold;
 }
 
 h1 {
@@ -36,151 +39,197 @@ p {
 }
 
 .profile-img {
+  width: 150px; /* Tamanho ajustável, dependendo da imagem */
+  height: 150px;
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover; /* Garante que a imagem preencha o círculo */
+  border: 3px solid var(--primary-color); /* Borda sutil com a cor primária */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
+  transition: transform 0.3s ease-in-out; /* Animação suave ao passar o mouse */
   margin-bottom: 25px; /* Ajusta o espaço entre a imagem e o texto */
 }
 
-.btn {
-  font-size: 16px; /* Tamanho confortável para botões */
+.profile-img:hover {
+  transform: scale(1.05); /* Leve zoom ao passar o mouse */
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   h1 {
-    font-size: 28px; /* Tamanho menor para títulos em telas pequenas */
+      font-size: 28px; /* Tamanho menor para títulos em telas pequenas */
   }
 
   h2 {
-    font-size: 24px;
+      font-size: 24px;
   }
 
   p {
-    font-size: 16px; /* Ajuste de parágrafos em telas pequenas */
+      font-size: 16px; /* Ajuste de parágrafos em telas pequenas */
   }
 
   .profile-img {
-    width: 120px; /* Reduz a imagem para dispositivos menores */
-    height: 120px;
+      width: 120px; /* Reduz a imagem para dispositivos menores */
+      height: 120px;
   }
 }
 
+header, section {
+  padding: 20px;
+}
 
-  header, section {
-    padding: 20px;
-  }
-  
-  h1, h2 {
-    color: var(--primary-color);
-    text-shadow: 1px 1px 2px rgba(158, 158, 158, 0.3); /* Sombra leve */
-    font-weight: bold;
-  }
-  
-  
-  
-  button {
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .dark-theme {
-    background-color: var(--black);
-    color: var(--light-color);
-  }
-  
-  .light-theme {
-    background-color: var(--light-color);
-    color: var(--black);
-  }
-  
-  .slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .slide {
-    min-width: 300px;
-    margin-right: 10px;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-    scroll-snap-align: start;
-  }
-  
-  .social-links a {
-    margin-right: 10px;
-    color: var(--primary-color);
-  }
-  
-  #cookie-consent {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    text-align: center;
-    padding: 10px;
-    display: none;
-  }
-  /* Estilo do menu de navegação */
+button {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  min-width: 300px;
+  margin-right: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  scroll-snap-align: start;
+}
+
+/* Links sociais */
+.social-links a {
+  margin-right: 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Cookie consent */
+#cookie-consent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+
+/* Menu de navegação */
 nav {
-    background-color: var(--dark-color);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: var(--light-color);
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    color: var(--primary-color);
-  }
-  /* Tema escuro */
+  background-color: var(--dark-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--light-color);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Tema escuro */
+.dark-theme {
+  background-color: var(--black);
+  color: var(--light-color);
+}
+
 .dark-theme h1, .dark-theme h2 {
-    color: #e0e0e0; /* Cinza claro que contrasta bem com fundo escuro */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra leve para destaque */
-  }
-  
-  /* Tema claro */
-  .light-theme h1, .light-theme h2 {
-    color: #2c3e50; /* Azul escuro suave para fundo claro */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3); /* Sombra leve para fundo claro */
-  }
-/* Container da imagem */
-.profile-picture {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo da imagem pessoal */
-  .profile-img {
-    width: 150px; /* Tamanho ajustável, dependendo da imagem */
-    height: 150px;
-    border-radius: 50%; /* Torna a imagem redonda */
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    border: 3px solid var(--primary-color); /* Borda sutil com a cor primária */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
-    transition: transform 0.3s ease-in-out; /* Animação suave ao passar o mouse */
-  }
-  
-  /* Efeito ao passar o mouse na imagem */
-  .profile-img:hover {
-    transform: scale(1.05); /* Leve zoom ao passar o mouse */
-  }
-    
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Tema claro */
+.light-theme {
+  background-color: var(--light-color);
+  color: var(--black);
+}
+
+.light-theme h1, .light-theme h2 {
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Seção de projetos */
+.projects-section {
+  padding: 50px 20px;
+  background-color: var(--primary-color);
+  text-align: center;
+  overflow: hidden;
+}
+
+.project-card {
+  margin: 20px auto;
+  max-width: 300px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  padding: 15px;
+  color: #ffffff;
+}
+
+.project-info p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Botão */
+.btn {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1b1f54;
+}
